@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Shabira Vikha Setyanto A12.2025.07420</title>
+
+    <!-- Bootstrap 5.3.8 (lokal) dulu, baru CSS buatan sendiri -->
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER & NAVIGASI ===== -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-cv">
+            <div class="container">
+                <a class="navbar-brand" href="#beranda">
+                    <span class="brand-kecil">Portofolio</span> Shabira V.S.
+                </a>
+
+                <!-- Tombol hamburger (muncul di layar < 768px) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuUtama" aria-controls="menuUtama"
+                        aria-expanded="false" aria-label="Buka menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuUtama">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sertifikat">Sertifikat</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===== HERO ===== -->
+        <section id="beranda" class="hero">
+            <div class="hero-isi">
+                <img class="hero-foto" src="images/images.jpg" alt="Foto Shabira Vikha Setyanto">
+                <h1 class="hero-nama">Shabira Vikha Setyanto</h1>
+                <p class="hero-jabatan">Mahasiswa Sistem Informasi | Calon Web Developer</p>
+                <div class="hero-tombol">
+                    <a href="#kontak" class="btn btn-marun">Hubungi Saya</a>
+                    <a href="#proyek" class="btn btn-krem">Lihat Proyek</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== A. PROFIL ===== -->
+        <section id="profil" class="bagian">
+            <div class="container">
+                <div class="kartu dua-kolom">
+
+                    <div class="kolom">
+                        <h2 class="judul-bagian">Tentang Saya</h2>
+                        <p>
+                            Halo! Nama saya Shabira Vikha Setyanto, mahasiswa aktif Program Studi
+                            Sistem Informasi, Fakultas Ilmu Komputer, Universitas Dian Nuswantoro.
+                            Saya memiliki minat di bidang teknologi informasi, khususnya
+                            pemrograman web, sistem informasi, dan pengembangan basis data.
+                        </p>
+                        <p>
+                            Saya senang mempelajari teknologi baru dan terus mengembangkan kemampuan
+                            melalui kegiatan belajar, membaca referensi, praktik pemrograman, serta
+                            mengikuti perkembangan teknologi informasi.
+                        </p>
+                    </div>
+
+                    <div class="kolom">
+                        <h2 class="judul-bagian">Informasi Dasar</h2>
+                        <ul class="info-list">
+                            <li><span class="info-label">NIM</span><span>A12.2025.07420</span></li>
+                            <li><span class="info-label">Program Studi</span><span>S1 Sistem Informasi</span></li>
+                            <li><span class="info-label">Kampus</span><span>Universitas Dian Nuswantoro</span></li>
+                            <li><span class="info-label">Domisili</span><span>Kota Tegal</span></li>
+                            <li><span class="info-label">Email</span><span>112202507420@mhs.dinus.ac.id</span></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== B. PENDIDIKAN ===== -->
+        <!-- Tabel boleh dipakai: isinya data tabular, bukan untuk layout -->
+        <section id="pendidikan" class="bagian bagian-krem">
+            <div class="container">
+                <h2 class="judul-bagian text-center">Riwayat Pendidikan</h2>
+                <div class="table-responsive">
+                    <table class="table tabel-cv">
+                        <thead>
+                            <tr>
+                                <th>Tingkat</th>
+                                <th>Instansi / Sekolah</th>
+                                <th>Tahun</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sekolah Dasar</td>
+                                <td>SDN Mangkukusuman 08 Kota Tegal</td>
+                                <td>2012 - 2018</td>
+                                <td>Lulus</td>
+                            </tr>
+                            <tr>
+                                <td>SMP</td>
+                                <td><a href="https://smpn10tegal.sch.id/" target="_blank">SMPN 10 Kota Tegal</a></td>
+                                <td>2018 - 2021</td>
+                                <td>Lulus</td>
+                            </tr>
+                            <tr>
+                                <td>SMA</td>
+                                <td><a href="https://sman1tegal.sch.id/" target="_blank">SMAN 1 Kota Tegal</a></td>
+                                <td>2021 - 2024</td>
+                                <td>Jurusan IPA</td>
+                            </tr>
+                            <tr>
+                                <td>S1</td>
+                                <td><a href="https://www.dinus.ac.id" target="_blank">Universitas Dian Nuswantoro</a></td>
+                                <td>2025 - sekarang</td>
+                                <td>Sistem Informasi</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== C. KEAHLIAN & HOBI ===== -->
+        <section id="keahlian" class="bagian">
+            <div class="container">
+                <div class="dua-kolom">
+
+                    <div class="kolom kartu">
+                        <h2 class="judul-bagian">Keahlian</h2>
+
+                        <p class="skill-nama">HTML &amp; CSS</p>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar" style="width: 80%">80%</div>
+                        </div>
+
+                        <p class="skill-nama">Bootstrap</p>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar" style="width: 70%">70%</div>
+                        </div>
+
+                        <p class="skill-nama">PHP &amp; MySQL</p>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar" style="width: 60%">60%</div>
+                        </div>
+
+                        <p class="skill-nama">Pemodelan Sistem (DFD &amp; ERD)</p>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar" style="width: 75%">75%</div>
+                        </div>
+                    </div>
+
+                    <div class="kolom kartu">
+                        <h2 class="judul-bagian">Hobi &amp; Minat</h2>
+                        <ul class="hobi-list">
+                            <li>Mempelajari pemrograman web (HTML, CSS, Bootstrap)</li>
+                            <li>Mengembangkan aplikasi yang mudah digunakan dan responsif</li>
+                            <li>Membaca dokumentasi di <a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+                            <li>Menulis</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== D. PENGALAMAN & PENGHARGAAN ===== -->
+        <section id="pengalaman" class="bagian bagian-krem">
+            <div class="container">
+                <h2 class="judul-bagian text-center">Pengalaman &amp; Penghargaan</h2>
+                <div class="table-responsive">
+                    <table class="table tabel-cv">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Kegiatan</th>
+                                <th>Peran</th>
+                                <th>Tahun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Seminar Nasional Sistem Informasi</td>
+                                <td>Panitia</td>
+                                <td>2026</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Kelas Dicoding Belajar Dasar Data Science</td>
+                                <td>Peserta</td>
+                                <td>2026</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Pelatihan Pastry dan Bakery</td>
+                                <td>Peserta</td>
+                                <td>2024</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>The Academic Performance And Selection As A Nestle Scholar</td>
+                                <td>Peserta</td>
+                                <td>2018</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== E. SERTIFIKAT ===== -->
+        <section id="sertifikat" class="bagian">
+            <div class="container">
+                <h2 class="judul-bagian text-center">Sertifikat</h2>
+                <div class="kartu-grid">
+
+                    <article class="kartu kartu-item">
+                        <img src="images/sertif.jpg" alt="Sertifikat Dicoding" class="kartu-gambar" data-bs-toggle="modal" data-bs-target="#modalSertif1">
+                        <h3>Sertifikat Dicoding</h3>
+                        <p>Dicoding Indonesia, 2026</p>
+                    </article>
+
+                    <article class="kartu kartu-item">
+                        <img src="images/sertifdua.jpg" alt="Sertifikat Panitia Seminar" class="kartu-gambar" data-bs-toggle="modal" data-bs-target="#modalSertif2">
+                        <h3>Panitia Seminar</h3>
+                        <p>Himpunan Mahasiswa Sistem Informasi UDINUS, 2026</p>
+                    </article>
+
+                    <article class="kartu kartu-item">
+                        <img src="images/sertiftiga.jpg" alt="Sertifikat Kompetensi" class="kartu-gambar" data-bs-toggle="modal" data-bs-target="#modalSertif3">
+                        <h3>Sertifikat Kompetensi</h3>
+                        <p>Lembaga Sertifikasi Kompetensi Tata Boga, 2024</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== F. PROYEK ===== -->
+        <section id="proyek" class="bagian bagian-krem">
+            <div class="container">
+                <h2 class="judul-bagian text-center">Proyek &amp; Aktivitas Akademik</h2>
+                <div class="kartu-grid">
+                    <article class="kartu kartu-item">
+                        <h3>Tugas Pemrograman Web 1</h3>
+                        <p>
+                            Halaman profil dan form interaktif menggunakan elemen semantik HTML,
+                            tabel terstruktur, dan elemen input form.
+                        </p>
+                    </article>
+                    <article class="kartu kartu-item">
+                        <h3>Redesign Portofolio Responsif</h3>
+                        <p>
+                            Perancangan ulang halaman CV menggunakan CSS eksternal, Flexbox,
+                            media queries, dan Bootstrap 5.3.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== G. KONTAK ===== -->
+        <section id="kontak" class="bagian">
+            <div class="container">
+                <h2 class="judul-bagian text-center">Hubungi Saya</h2>
+                <div class="dua-kolom">
+
+                    <div class="kolom kartu">
+                        <h3>Info Kontak</h3>
+                        <p>Silakan kirim saran atau pesan melalui form, atau hubungi saya lewat:</p>
+                        <ul class="info-list">
+                            <li><span class="info-label">Email</span><span>112202507420@mhs.dinus.ac.id</span></li>
+                            <li><span class="info-label">Kampus</span><span>Universitas Dian Nuswantoro, Semarang</span></li>
+                        </ul>
+                        <p class="catatan">
+                            Terima kasih telah mengunjungi website saya. Semoga informasi di sini
+                            bermanfaat.
+                        </p>
+                    </div>
+
+                    <!-- Form TANPA <table>: memakai class form Bootstrap -->
+                    <form class="kolom kartu" action="#" method="post">
+                        <div class="mb-3">
+                            <label for="fnama" class="form-label">Nama Lengkap</label>
+                            <input type="text" id="fnama" name="fnama" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="femail" class="form-label">Email</label>
+                            <input type="email" id="femail" name="femail" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fpesan" class="form-label">Pesan / Saran</label>
+                            <textarea id="fpesan" name="fpesan" rows="4" class="form-control"></textarea>
+                        </div>
+                        <div class="form-tombol">
+                            <button type="submit" class="btn btn-marun">Kirim Pesan</button>
+                            <button type="reset" class="btn btn-krem">Batal</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+<!-- ===== POPUP (MODAL) SERTIFIKAT ===== -->
+<div class="modal fade" id="modalSertif1" tabindex="-1" aria-labelledby="judulSertif1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content modal-cv">
+            <div class="modal-header">
+                <h5 class="modal-title" id="judulSertif1">Sertifikat Dicoding</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <img src="images/sertif.jpg" alt="Sertifikat Dicoding" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalSertif2" tabindex="-1" aria-labelledby="judulSertif2" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content modal-cv">
+            <div class="modal-header">
+                <h5 class="modal-title" id="judulSertif2">Panitia Seminar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <img src="images/sertifdua.jpg" alt="Sertifikat Panitia Seminar" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalSertif3" tabindex="-1" aria-labelledby="judulSertif3" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content modal-cv">
+            <div class="modal-header">
+                <h5 class="modal-title" id="judulSertif3">Sertifikat Kompetensi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+            </div>
+            <div class="modal-body">
+                <img src="images/sertiftiga.jpg" alt="Sertifikat Kompetensi" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-cv">
+        <p>&copy; 2026 Shabira Vikha Setyanto - Pemrograman Web, Sistem Informasi Universitas Dian Nuswantoro</p>
+    </footer>
+
+    <!-- JS Bootstrap (untuk menu hamburger) -->
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Menutup menu hamburger otomatis setelah link diklik (di HP) -->
+    <script>
+        document.querySelectorAll('#menuUtama .nav-link').forEach(function (link) {
+            link.addEventListener('click', function () {
+                var menu = document.getElementById('menuUtama');
+                if (menu.classList.contains('show')) {
+                    bootstrap.Collapse.getOrCreateInstance(menu).hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

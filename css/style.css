@@ -1,0 +1,450 @@
+/* =========================================================
+   style.css - Portofolio CV Shabira Vikha Setyanto
+   Tema: merah marun & krem
+   Isi: 1-12 styling dasar | 13 layout Flexbox | 14 responsive | 15 popup
+   ========================================================= */
+
+/* ===== 1. Variabel warna ===== */
+:root {
+    --marun:      #7a1f2b;   /* warna utama */
+    --marun-tua:  #561520;   /* hover, footer */
+    --krem:       #f5ede0;   /* latar bagian selang-seling */
+    --krem-tua:   #e8d9c0;   /* garis, aksen */
+    --putih:      #ffffff;
+    --teks:       #2e2422;   /* teks utama */
+    --teks-redup: #6b5d58;
+}
+
+/* ===== 2. Dasar halaman ===== */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--teks);
+    background-color: var(--putih);
+    overflow-x: hidden;   /* jaga-jaga agar tidak ada horizontal scroll */
+}
+
+img {
+    max-width: 100%;      /* gambar tidak pernah melebihi layar */
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--marun);
+}
+
+a {
+    color: var(--marun);
+}
+
+a:hover {
+    color: var(--marun-tua);
+}
+
+::selection {
+    background-color: var(--marun);
+    color: var(--krem);
+}
+
+/* Judul bagian tidak tertutup navbar saat menu diklik */
+section {
+    scroll-margin-top: 70px;
+}
+
+/* ===== 3. Navbar ===== */
+.navbar-cv {
+    background-color: var(--marun);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-cv .navbar-brand {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--krem);
+}
+
+.navbar-cv .brand-kecil {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--krem-tua);
+    margin-right: 6px;
+}
+
+.navbar-cv .nav-link {
+    color: var(--krem);
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar-cv .nav-link:hover,
+.navbar-cv .nav-link:focus {
+    color: var(--putih);
+    text-decoration: underline;
+}
+
+/* ===== 4. Hero ===== */
+.hero {
+    background-color: var(--marun);
+    color: var(--krem);
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero-foto {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--krem);
+}
+
+.hero-nama {
+    color: var(--krem);
+    font-size: 40px;
+    margin: 16px 0 4px;
+}
+
+.hero-jabatan {
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+/* ===== 5. Tombol ===== */
+.btn-marun {
+    background-color: var(--marun);
+    color: var(--krem);
+    border: 2px solid var(--krem);
+    padding: 8px 24px;
+}
+
+.btn-marun:hover {
+    background-color: var(--marun-tua);
+    color: var(--putih);
+    border-color: var(--krem);
+}
+
+/* Di dalam form (latar putih), garis tombol marun ikut marun */
+form .btn-marun {
+    border-color: var(--marun);
+}
+
+.btn-krem {
+    background-color: var(--krem);
+    color: var(--marun);
+    border: 2px solid var(--marun);
+    padding: 8px 24px;
+}
+
+.btn-krem:hover {
+    background-color: var(--krem-tua);
+    color: var(--marun-tua);
+    border-color: var(--marun);
+}
+
+/* ===== 6. Bagian (section) ===== */
+.bagian {
+    padding: 70px 0;
+}
+
+.bagian-krem {
+    background-color: var(--krem);
+}
+
+.judul-bagian {
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+/* ===== 7. Kartu ===== */
+.kartu {
+    background-color: var(--putih);
+    border: 1px solid var(--krem-tua);
+    border-top: 4px solid var(--marun);
+    border-radius: 8px;
+    padding: 28px;
+    box-shadow: 0 6px 18px rgba(86, 21, 32, 0.08);
+}
+
+.kartu-item h3 {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.kartu-item p {
+    margin-bottom: 0;
+}
+
+.kartu-gambar {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;      /* sertifikat utuh, tidak terpotong */
+    background-color: var(--krem);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+/* ===== 8. Info dasar (titik dua rata) ===== */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    display: flex;
+    gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--krem-tua);
+}
+
+.info-label {
+    flex: 0 0 150px;                  /* lebar label tetap */
+    display: flex;
+    justify-content: space-between;   /* teks kiri, titik dua di ujung kanan */
+    font-weight: bold;
+    color: var(--marun);
+    text-transform: uppercase;
+    font-size: 13px;
+    padding-top: 2px;
+    padding-right: 8px;
+}
+
+.info-label::after {
+    content: ":";
+}
+
+/* ===== 9. Tabel ===== */
+.tabel-cv {
+    background-color: var(--putih);
+    margin-bottom: 0;
+}
+
+.tabel-cv thead th {
+    background-color: var(--marun);
+    color: var(--krem);
+}
+
+.tabel-cv tbody tr:hover td {
+    background-color: var(--krem);
+    color: var(--marun);
+}
+
+/* ===== 10. Skill bar & hobi ===== */
+.skill-nama {
+    margin: 12px 0 4px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    height: 18px;
+    background-color: var(--krem);
+}
+
+.skill-bar .progress-bar {
+    background-color: var(--marun);
+}
+
+.hobi-list {
+    padding-left: 20px;
+}
+
+.hobi-list li {
+    margin-bottom: 8px;
+}
+
+.hobi-list li::marker {
+    color: var(--marun);
+}
+
+/* ===== 11. Form ===== */
+.form-control:focus {
+    border-color: var(--marun);
+    box-shadow: 0 0 0 3px rgba(122, 31, 43, 0.2);
+}
+
+.catatan {
+    font-size: 14px;
+    color: var(--teks-redup);
+    margin-top: 16px;
+}
+
+/* ===== 12. Footer ===== */
+.footer-cv {
+    background-color: var(--marun-tua);
+    color: var(--krem);
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer-cv p {
+    margin: 0;
+}
+
+/* =========================================================
+   13. LAYOUT FLEXBOX (desktop)
+   ========================================================= */
+
+/* Tombol hero berjajar di tengah */
+.hero-tombol,
+.form-tombol {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-tombol {
+    justify-content: center;
+}
+
+/* Dua kolom berdampingan: Tentang Saya | Info, Keahlian | Hobi, Info Kontak | Form */
+.dua-kolom {
+    display: flex;
+    gap: 32px;
+    align-items: stretch;   /* tinggi kolom sama */
+}
+
+.dua-kolom .kolom {
+    flex: 1;                /* lebar kolom dibagi rata */
+    min-width: 0;
+}
+
+/* Kartu sertifikat & proyek: berjajar, turun baris otomatis */
+.kartu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.kartu-grid .kartu-item {
+    flex: 1 1 280px;        /* minimal 280px, sisanya dibagi rata */
+    max-width: 360px;
+}
+
+/* =========================================================
+   14. RESPONSIVE (media queries)
+   ========================================================= */
+
+/* Tablet & HP: di bawah 768px */
+@media (max-width: 767.98px) {
+
+    /* Menu hamburger yang terbuka diberi jarak */
+    .navbar-cv .navbar-nav {
+        padding: 8px 0;
+    }
+
+    .hero {
+        padding: 50px 16px;
+    }
+
+    .hero-foto {
+        width: 120px;
+        height: 120px;
+    }
+
+    .hero-nama {
+        font-size: 28px;
+    }
+
+    .hero-jabatan {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .bagian {
+        padding: 50px 0;
+    }
+
+    .judul-bagian {
+        font-size: 24px;
+    }
+
+    /* Kolom berdampingan menjadi bertumpuk */
+    .dua-kolom {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .kartu {
+        padding: 20px;
+    }
+
+    /* Kartu sertifikat/proyek memenuhi lebar layar */
+    .kartu-grid .kartu-item {
+        max-width: 100%;
+    }
+
+    /* Label info sedikit lebih sempit */
+    .info-label {
+        flex-basis: 120px;
+        font-size: 12px;
+    }
+
+    /* Tombol form memenuhi lebar */
+    .form-tombol .btn {
+        flex: 1;
+    }
+}
+
+/* HP kecil: di bawah 400px */
+@media (max-width: 399.98px) {
+    .navbar-cv .brand-kecil {
+        display: none;      /* layar sempit: tampilkan nama saja */
+    }
+
+    .info-list li {
+        flex-direction: column;   /* label di atas, isi di bawah */
+        gap: 0;
+    }
+
+    .info-label {
+        flex-basis: auto;
+        justify-content: flex-start;
+    }
+}
+/* ===== 15. Popup sertifikat ===== */
+.kartu-gambar {
+    cursor: zoom-in;                 /* kursor kaca pembesar: tanda bisa diklik */
+    transition: transform 0.2s;
+}
+
+.kartu-gambar:hover {
+    transform: scale(1.03);          /* sedikit membesar saat disorot */
+}
+
+.modal-cv .modal-header {
+    background-color: var(--marun);
+    color: var(--krem);
+}
+
+.modal-cv .modal-title {
+    font-family: Georgia, serif;
+    color: var(--krem);
+}
+
+.modal-cv .btn-close {
+    filter: invert(1);               /* tombol X jadi putih di latar marun */
+}
+
+.modal-cv .modal-body {
+    background-color: var(--krem);
+    text-align: center;
+}
